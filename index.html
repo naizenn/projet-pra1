@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watchlist</title>
+  <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Watchlist</h1>
+  </header>
+
+  <section id="stats"></section>
+
+  <section id="controls">
+    <input type="search" id="search" placeholder="Rechercher un titre...">
+
+    <select id="filter-genre">
+      <option value="">Tous les genres</option>
+      <option value="SF">SF</option>
+      <option value="Drame">Drame</option>
+      <option value="Comédie">Comédie</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Animation">Animation</option>
+    </select>
+
+    <select id="filter-status">
+      <option value="">Tous les statuts</option>
+      <option value="aVoir">À voir</option>
+      <option value="vu">Vu</option>
+    </select>
+
+    <select id="sort">
+      <option value="">Trier par...</option>
+      <option value="title">Titre</option>
+      <option value="year">Année</option>
+      <option value="rating">Note</option>
+    </select>
+  </section>
+
+
+
+  <script src="data.js"></script>
+  <script src="card.js"></script>
+  <script src="list.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
