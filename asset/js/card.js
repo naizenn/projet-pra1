@@ -66,5 +66,17 @@ function renderCard(film) {
 
   card.append(img, title, meta, status, rating);
 
+  const toggleBtn = document.createElement('button');
+  toggleBtn.textContent = film.status === 'vu' ? 'Marquer à voir' : 'Marquer vu';
+  toggleBtn.dataset.action = 'toggle';
+  toggleBtn.dataset.id = film.id;
+
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = 'Supprimer';
+  deleteBtn.dataset.action = 'delete';
+  deleteBtn.dataset.id = film.id;
+
+  card.append(toggleBtn, deleteBtn);
+
   return card;
 }

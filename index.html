@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watchlist</title>
-  <script src="asset/js/data.js"></script>
-  <script src="asset/js/list.js"></script>
+  <script src="asset/js/data.js" defer></script>
+  <script src="asset/js/list.js" defer></script>
+  <script src="asset/js/card.js" defer></script>
+  <script src="asset/js/app.js" defer></script>
+
   <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
@@ -41,12 +44,21 @@
     </select>
   </section>
 
+  <form id="formulaire">
+  <input type="text" id="titre" placeholder="Titre">
+  <select id="genre">
+    <option value="SF">SF</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Drame">Drame</option>
+    <option value="Comedie">Comédie</option>
+    <option value="Animation">Animation</option>
+    
+  </select>
+  <input type="number" id="annee" placeholder="Année">
+  <input type="text" id="image" placeholder="Adresse de l'image (facultatif)">
+  <button type="submit">Ajouter</button>
+  <p id="erreur"></p>
+</form>
 
-
-  <script src="data.js"></script>
-  <script src="card.js"></script>
-  <script src="list.js"></script>
-
-  <script src="app.js"></script>
 </body>
 </html>

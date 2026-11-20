@@ -74,3 +74,43 @@ document.getElementById('film-list').addEventListener('click', (event) => {
 });
 
 refresh();
+
+const form = document.getElementById("formulaire");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();                      
+
+  const titre = document.getElementById("titre").value.trim();
+  const genre = document.getElementById("genre").value;
+  const annee = Number(document.getElementById("annee").value);
+  const image = document.getElementById("image").value.trim();
+  const erreur = document.getElementById("erreur");
+
+  
+  if (titre === "") {
+    erreur.textContent = "Le titre est obligatoire.";
+    return;
+  }
+  if (!Number.isInteger(year) || year < 1888 || year > 2100) {
+    erreur.textContent = "L'année n'est pas valide.";
+    return;
+  }
+  erreur.textContent = "";
+
+
+  const newId = Math.max(0, ...state.films.map(f => f.id)) + 1;
+
+
+  state.films.push({
+    id: newId,
+    title: titre,
+    genre: genre,
+    year: annee,
+    image: image,          
+    status: "aVoir",       
+    rating: 0             
+  });
+
+  form.reset();            
+  refresh();               
+});
