@@ -1,5 +1,5 @@
 
-function renderList(data) {
+function renderList(films) {
 
   const container = document.getElementById('films-list') 
   container.textContent = ''
